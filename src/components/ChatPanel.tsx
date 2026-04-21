@@ -3,14 +3,14 @@ import { useState, useEffect, useRef } from "react"
 import { useUIStore } from "@/lib/ui-store"
 import { Button } from "@/components/ui/button"
 
-const QUICK_CHIPS = ["Кто ты?", "Покажи арт", "Над чем работаешь?"]
+const QUICK_CHIPS = ["Кто ты?", "Покажи проекты", "Над чем работаешь?"]
 
 const RESPONSES: Record<string, string> = {
-  "Кто ты?": "Я AI-помощник Алекса! Помогаю показать работы и рассказать о нем. Хочешь узнать больше?",
-  "Покажи арт":
-    "С удовольствием покажу работы Алекса! В них сочетаются цифровые и традиционные техники.",
+  "Кто ты?": "Я AI-помощник этого разработчика! Могу рассказать об опыте, проектах и стеке технологий. Что интересует?",
+  "Покажи проекты":
+    "Покажу портфолио проектов! Открой раздел «Резюме» — там собраны ключевые работы с описанием стека.",
   "Над чем работаешь?":
-    "Сейчас в работе несколько проектов! Алекс занимается AI-приложениями и креативным кодингом.",
+    "Сейчас в активной разработке! Пишу код, изучаю новые технологии и делюсь опытом с коллегами.",
 }
 
 const ACTION_RESPONSES: Record<string, { response: string; action: string }> = {
@@ -19,7 +19,7 @@ const ACTION_RESPONSES: Record<string, { response: string; action: string }> = {
   "открой резюме": { response: "Открываю резюме!", action: "resume" },
   "покажи резюме": { response: "Вот резюме!", action: "resume" },
   "открой обо мне": { response: "Открываю раздел обо мне!", action: "about" },
-  "покажи обо мне": { response: "Расскажу об Алексе!", action: "about" },
+  "покажи обо мне": { response: "Расскажу о разработчике!", action: "about" },
   "открой статьи": { response: "Открываю статьи!", action: "writings" },
   "покажи статьи": { response: "Вот статьи!", action: "writings" },
 }
@@ -62,7 +62,7 @@ export function ChatPanel() {
     } else {
       // Default response for non-action messages
       const defaultResponse =
-        "Интересно! Я помогу изучить работы Алекса. Попробуй написать «открой арт» или «покажи резюме»!"
+        "Интересно! Могу показать мои проекты и опыт. Попробуй написать «покажи резюме» или «открой статьи»!"
       setMessages((prev) => [...prev, { text: userMessage, isUser: true }, { text: defaultResponse, isUser: false }])
     }
   }

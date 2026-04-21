@@ -5,21 +5,21 @@ export function MiniAppAbout() {
 
       <div className="space-y-6">
         <div className="bg-white p-6 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          <h3 className="text-2xl font-black mb-4">Привет, я Алекс Нова!</h3>
+          <h3 className="text-2xl font-black mb-4">Привет, я разработчик!</h3>
           <p className="text-lg leading-relaxed mb-4">
-            Я креативный разработчик, который любит создавать важные вещи. Работаю на стыке дизайна и
-            технологий, создаю продукты, которые красивы и функциональны.
+            Пишу код и строю продукты, которые работают. Мне важна не только техническая сторона, но и то,
+            как решение выглядит и ощущается для пользователя.
           </p>
           <p className="text-lg leading-relaxed">
-            Когда не пишу код, изучаю новые формы искусства, пишу о технологиях и экспериментирую с
-            AI и креативными инструментами.
+            Когда не пишу код — изучаю новые технологии, слежу за трендами в разработке и делюсь опытом
+            с коллегами через статьи и живые обсуждения.
           </p>
         </div>
 
         <div className="bg-white p-6 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           <h3 className="text-2xl font-black mb-4">Навыки и интересы</h3>
           <div className="flex flex-wrap gap-2">
-            {["React", "Next.js", "TypeScript", "AI/ML", "Дизайн-системы", "Креативный код", "Тексты", "Арт"].map(
+            {["React", "TypeScript", "Python", "Node.js", "PostgreSQL", "REST API", "Git", "Docker", "CI/CD", "Agile"].map(
               (skill) => (
                 <span
                   key={skill}
